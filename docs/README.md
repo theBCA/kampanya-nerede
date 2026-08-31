@@ -16,7 +16,8 @@ Raw `.docx`, exported research HTML, pasted notes, and the local `context/` fold
 
 The current source of truth for building is:
 
-1. `docs/product/mvp-spec.md`
-2. `docs/technical/architecture.md`
-3. `docs/market/real-website-examples.md`
-4. `fiyati-ne-mvp.html`
+1. `docs/product/mvp-extended.md`
+2. `docs/product/mvp-spec.md`
+3. `docs/technical/architecture.md`
+4. `docs/market/real-website-examples.md`
+5. `fiyati-ne-mvp.html`

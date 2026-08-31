@@ -51,6 +51,7 @@ Start with high-frequency categories where campaign discovery is fragmented and 
 
 - `fiyati-ne-mvp.html` - single-file MVP plan and product prototype
 - `docs/mvp-v1.md` - concise MVP scope
+- `docs/product/mvp-extended.md` - extended product, market, UX, data, and rollout blueprint
 - `docs/name-ideas.md` - naming shortlist
 - `docs/product/mvp-spec.md` - fuller MVP product spec
 - `docs/technical/architecture.md` - initial technical architecture

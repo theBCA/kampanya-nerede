@@ -605,6 +605,7 @@
         <a href="#motor">Fiyat motoru</a>
         <a href="#ekranlar">Ekranlar</a>
         <a href="#teknik">Teknik</a>
+        <a href="#blueprint">Blueprint</a>
         <a href="#takvim">6 hafta</a>
       </div>
     </nav>
@@ -940,6 +941,85 @@
           <span class="pill">Admin</span>
           <h3>Kaynak kontrol paneli</h3>
           <p>Yanlış eşleşme, stok hatası, fiyat sıçraması ve hüküm nedeni manuel incelenebilir olmalı.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blueprint">
+      <div class="section-head">
+        <h2>Extended blueprint</h2>
+        <p class="section-note">Bu bölüm uygulamayı gerçekten inşa edecek sırayı özetler. Tam kaynak doküman: <a href="docs/product/mvp-extended.md">docs/product/mvp-extended.md</a>.</p>
+      </div>
+      <div class="grid">
+        <div class="panel">
+          <span class="pill">Ürün modülleri</span>
+          <h3>Önce güven katmanı</h3>
+          <p>Public web, fiyat gözlem motoru, ürün eşleştirme, hüküm motoru, alarm sistemi ve admin paneli ilk fazın çekirdeği. Mobil app, eklenti ve forum sonraya kalır.</p>
+        </div>
+        <div class="panel">
+          <span class="pill">Kullanıcı hikayesi</span>
+          <h3>Ürünü bilmek zorunda değil</h3>
+          <p>Kullanıcı link yapıştırabilir, ürünü takip edebilir veya “SPF 50, 100 ml fiyatı 300 TL altı” gibi ihtiyacını takip ettirebilir.</p>
+        </div>
+        <div class="panel">
+          <span class="pill">Admin şart</span>
+          <h3>Veri kalitesi görünür olmalı</h3>
+          <p>Kaynak sağlığı, son gözlemler, yanlış eşleşme kuyruğu, fiyat sıçramaları ve hüküm nedeni admin panelinden kontrol edilebilmeli.</p>
+        </div>
+      </div>
+
+      <table class="table" style="margin-top:14px;">
+        <thead>
+          <tr>
+            <th>Build sırası</th>
+            <th>Çıktı</th>
+            <th>Neden bu sırada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Veritabanı şeması</td>
+            <td>products, offers, price_observations, verdicts, alerts, votes, purchase_watches</td>
+            <td>Hüküm ve kanıt ilişkisi baştan doğru kurulmalı.</td>
+          </tr>
+          <tr>
+            <td>2. Seed katalog</td>
+            <td>İlk 100 ürün, sonra 500 cilt bakımı ürünü.</td>
+            <td>Boş crawler yazmak yerine bilinen ürünlerde veri kalitesi ölçülür.</td>
+          </tr>
+          <tr>
+            <td>3. İlk kaynak adaptörü</td>
+            <td>Trendyol veya Hepsiburada fiyat/stok gözlemleri.</td>
+            <td>Tek kaynak stabil olmadan çok kaynak hata üretir.</td>
+          </tr>
+          <tr>
+            <td>4. Hüküm motoru</td>
+            <td>Onaylı dip, gerçek indirim, bekle, şüpheli, yetersiz veri.</td>
+            <td>Ürünün farklılaşması katalogdan değil bu motordan gelir.</td>
+          </tr>
+          <tr>
+            <td>5. Public web</td>
+            <td>SSR ana sayfa, kategori, ürün detayı, link checker.</td>
+            <td>Kullanıcı ve arama motoru aynı kanıtı görür.</td>
+          </tr>
+          <tr>
+            <td>6. Alert ve topluluk</td>
+            <td>Web push, Telegram, iyi/kötü fiyat oyu, 14 gün fiyat koruma.</td>
+            <td>Geri dönüş alışkanlığı ve güven sinyali burada oluşur.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grid" style="margin-top:14px;">
+        <div class="panel wide">
+          <span class="pill">Acceptance</span>
+          <h3>İlk sürüm tamam sayılmaz, ta ki...</h3>
+          <p>Ürün kartı mobilde karar verdirecek kadar netse, ürün detayı hükmün nedenini kanıtlıyorsa, link checker bilinmeyen ürüne dürüstçe `Yetersiz veri` diyorsa, Telegram testi çalışıyorsa ve admin son fiyat gözlemini görebiliyorsa MVP kapanır.</p>
+        </div>
+        <div class="panel">
+          <span class="pill">Risk kontrolü</span>
+          <h3>Genişleme kapısı</h3>
+          <p>500 ürün, 100 beta kullanıcı, kullanıcı başı 3 takip ve %30 dördüncü hafta geri dönüş görülmeden kategori büyütülmez.</p>
         </div>
       </div>
     </section>

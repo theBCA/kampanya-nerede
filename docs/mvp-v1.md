@@ -45,6 +45,7 @@ Bu cevap satıcının indirim yüzdesine göre değil, 30-90 günlük fiyat geç
 
 ## Daha detaylı dokümanlar
 
+- `docs/product/mvp-extended.md`
 - `docs/product/mvp-spec.md`
 - `docs/technical/architecture.md`
 - `docs/market/real-website-examples.md`
