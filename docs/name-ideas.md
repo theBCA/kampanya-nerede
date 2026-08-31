@@ -1,5 +1,13 @@
 # Project Name Ideas
 
+## Current recommendation
+
+Use `Fiyatı Ne` as the brand.
+
+Reason: it is short, Turkish, buyer-sided, easy to say, and points to the product's real question: not "what campaign exists?" but "what is the real price?".
+
+Use `Alınır mı?` as a product verdict line inside cards, not as the main brand.
+
 Recommended shortlist:
 
 1. Fiyat Pusula

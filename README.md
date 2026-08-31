@@ -1,10 +1,10 @@
-# Kampanya Nerede
+# Fiyatı Ne
 
-README-first project repo for a campaign and real-discount intelligence product focused on Turkey first, with room to expand into Europe and the US.
+README-first project repo for a real-price and real-discount intelligence product focused on Turkey first, with room to expand into Europe and the US.
 
 ## Product idea
 
-Kampanya Nerede collects public commerce signals from e-commerce platforms, brands, marketplaces, coupons, card campaigns, shipping thresholds, stock state, and historical prices. It turns those signals into a user-facing discovery and alert product for real discounts.
+Fiyatı Ne collects public commerce signals from e-commerce platforms, brands, marketplaces, coupons, shipping thresholds, stock state, and historical prices. It turns those signals into a user-facing discovery and alert product for real discounts.
 
 The core differentiation is not "listing campaigns." The product should calculate the real net price for a specific user by combining:
 
@@ -47,6 +47,10 @@ Start with high-frequency categories where campaign discovery is fragmented and 
 - Notification service for Telegram and browser push.
 - Admin tools for source quality, seller flags, and moderation.
 
-## Repo status
+## Current MVP files
 
-This repository currently contains the initial project framing and naming work. Implementation should start once the MVP source list and first category are fixed.
+- `fiyati-ne-mvp.html` - single-file MVP plan and product prototype
+- `docs/mvp-v1.md` - concise MVP scope
+- `docs/name-ideas.md` - naming shortlist
+
+The repo also keeps the original `kampanya-nerede` research files as source material.
