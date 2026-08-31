@@ -1,7 +1,11 @@
 .DS_Store
 node_modules/
+.next/
 dist/
 build/
+coverage/
+npm-debug.log*
+*.tsbuildinfo
 .env
 .env.*
 !.env.example

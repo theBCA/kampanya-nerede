@@ -1,0 +1,520 @@
+:root {
+  --brand: #8c1d3f;
+  --brand-soft: #faebf0;
+  --ink: #1a1418;
+  --muted: #6f646a;
+  --line: #ddd3d7;
+  --paper: #fffafc;
+  --surface: #ffffff;
+  --good: #0e7a4a;
+  --warn: #b26b00;
+  --bad: #a23a2f;
+  --blue: #2662a6;
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 250, 252, 0.94);
+  backdrop-filter: blur(14px);
+}
+
+.nav {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 950;
+}
+
+.navlinks {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.navlinks a {
+  text-decoration: none;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 30px 20px 56px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+  gap: 28px;
+  align-items: flex-end;
+  padding: 34px 0 24px;
+}
+
+.eyebrow {
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.lead {
+  max-width: 680px;
+  color: #44393f;
+  font-size: 19px;
+}
+
+.heroPanel,
+.panel,
+.dealCard,
+.detailBlock {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 10px 28px rgba(26, 20, 24, 0.05);
+}
+
+.heroPanel {
+  padding: 18px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stat {
+  border: 1px solid #eadfe3;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fffafd;
+}
+
+.stat strong {
+  display: block;
+  font-size: 22px;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  gap: 12px;
+  margin: 14px 0 20px;
+}
+
+.searchBox {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 13px 14px;
+  background: white;
+  color: var(--muted);
+}
+
+.button {
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  background: var(--ink);
+  color: white;
+  font-weight: 850;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button.secondary {
+  background: white;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.filterChip,
+.badge {
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-weight: 850;
+}
+
+.filterChip {
+  border: 1px solid var(--line);
+  background: white;
+  color: #4f4349;
+  padding: 8px 11px;
+  font-size: 13px;
+}
+
+.filterChip.active {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.dealGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.dealCard {
+  overflow: hidden;
+}
+
+.productArt {
+  min-height: 180px;
+  background:
+    radial-gradient(circle at 40% 24%, rgba(255, 255, 255, 0.9) 0 12%, transparent 13%),
+    linear-gradient(145deg, #f3c7d4, #fff4ee 55%, #d8eee5);
+  border-bottom: 1px solid #eadfe3;
+  position: relative;
+}
+
+.productArt::before {
+  content: "";
+  position: absolute;
+  left: 40%;
+  top: 18%;
+  width: 20%;
+  height: 64%;
+  border-radius: 10px 10px 14px 14px;
+  background: linear-gradient(#ffffff, #f1eef0);
+  box-shadow: inset 0 0 0 1px #dfd3d7;
+}
+
+.productArt::after {
+  content: "";
+  position: absolute;
+  left: 42%;
+  top: 42%;
+  width: 16%;
+  height: 15%;
+  border-radius: 4px;
+  background: var(--brand);
+}
+
+.dealBody {
+  padding: 14px;
+}
+
+.badge {
+  padding: 5px 8px;
+  background: #edf7f1;
+  color: var(--good);
+  font-size: 11px;
+}
+
+.badge.warn {
+  background: #fff5e3;
+  color: var(--warn);
+}
+
+.badge.neutral {
+  background: #f2edf0;
+  color: #655860;
+}
+
+.badge.bad {
+  background: #fdecea;
+  color: var(--bad);
+}
+
+.productTitle {
+  margin: 9px 0 6px;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 950;
+}
+
+.unit {
+  color: var(--muted);
+  font-size: 12px;
+  text-align: right;
+}
+
+.priceStrip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #efe6e9;
+  border-bottom: 1px solid #efe6e9;
+  background: #fffafd;
+}
+
+.priceMetric {
+  min-width: 0;
+  padding: 9px 8px;
+  border-right: 1px solid #efe6e9;
+}
+
+.priceMetric:last-child {
+  border-right: 0;
+}
+
+.priceMetric span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.priceMetric strong {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.summary {
+  margin: 0;
+  padding: 12px 14px;
+  color: #493d43;
+  font-size: 13px;
+}
+
+.cardActions {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+  padding: 0 14px 14px;
+}
+
+.iconButton {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  min-width: 42px;
+  min-height: 42px;
+  background: white;
+  font-weight: 900;
+}
+
+.section {
+  margin-top: 34px;
+}
+
+.panelGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid var(--line);
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.table th {
+  background: #f8f1f4;
+  color: #5a4a51;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 18px;
+  align-items: start;
+}
+
+.detailBlock {
+  padding: 18px;
+}
+
+.chart {
+  height: 220px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(#fff, #fffafd);
+  position: relative;
+  overflow: hidden;
+}
+
+.chartLine {
+  position: absolute;
+  inset: 28px 22px 36px;
+}
+
+.chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.list {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+
+.list li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 940px) {
+  .hero,
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dealGrid,
+  .panelGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .nav,
+  .toolbar {
+    display: block;
+  }
+
+  .navlinks {
+    margin-top: 12px;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .stats,
+  .dealGrid,
+  .panelGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -49,6 +49,10 @@ Start with high-frequency categories where campaign discovery is fragmented and 
 
 ## Current MVP files
 
+- `app/` - Next.js app routes for the first technical MVP
+- `components/` - reusable product and layout components
+- `data/products.ts` - seed product catalog
+- `lib/price.ts` - explainable verdict and price helpers
 - `fiyati-ne-mvp.html` - single-file MVP plan and product prototype
 - `docs/mvp-v1.md` - concise MVP scope
 - `docs/product/mvp-extended.md` - extended product, market, UX, data, and rollout blueprint
@@ -58,3 +62,21 @@ Start with high-frequency categories where campaign discovery is fragmented and 
 - `docs/market/real-website-examples.md` - market examples from the research context
 
 The repo also keeps the original `kampanya-nerede` research files as source material.
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://127.0.0.1:3000`.
+
+Useful checks:
+
+```bash
+npm run lint
+npm run typecheck
+npm run build
+npm audit --omit=dev
+```
