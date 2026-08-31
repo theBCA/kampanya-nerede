@@ -5,3 +5,15 @@ build/
 .env
 .env.*
 !.env.example
+
+# Local research/context exports. Keep these on disk, but do not commit raw docs.
+context/
+*.docx
+*.pdf
+*.pages
+*.key
+
+# One-off pasted notes and generated local exports.
+BERKCEM*.txt
+kampanya-nerede*.html
+kampanya-nerede*.md

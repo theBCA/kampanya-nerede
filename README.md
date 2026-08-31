@@ -52,5 +52,8 @@ Start with high-frequency categories where campaign discovery is fragmented and 
 - `fiyati-ne-mvp.html` - single-file MVP plan and product prototype
 - `docs/mvp-v1.md` - concise MVP scope
 - `docs/name-ideas.md` - naming shortlist
+- `docs/product/mvp-spec.md` - fuller MVP product spec
+- `docs/technical/architecture.md` - initial technical architecture
+- `docs/market/real-website-examples.md` - market examples from the research context
 
 The repo also keeps the original `kampanya-nerede` research files as source material.

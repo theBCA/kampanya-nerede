@@ -43,6 +43,12 @@ Bu cevap satıcının indirim yüzdesine göre değil, 30-90 günlük fiyat geç
 - Product, Offer, FAQ JSON-LD
 - `llms.txt` ve bot erişim kontrolü
 
+## Daha detaylı dokümanlar
+
+- `docs/product/mvp-spec.md`
+- `docs/technical/architecture.md`
+- `docs/market/real-website-examples.md`
+
 ## İlk 6 hafta
 
 | Hafta | Çıktı |
