@@ -80,3 +80,19 @@ npm run typecheck
 npm run build
 npm audit --omit=dev
 ```
+
+## GitHub Pages deployment
+
+The app is configured for static export on GitHub Pages.
+
+Production URL after the first successful workflow run:
+
+`https://thebca.github.io/kampanya-nerede/`
+
+Manual local production export:
+
+```bash
+GITHUB_PAGES=true npm run build
+```
+
+GitHub Actions deploys `out/` from `.github/workflows/deploy-pages.yml` on every push to `main`.
